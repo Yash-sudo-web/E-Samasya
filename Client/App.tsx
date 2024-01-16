@@ -13,6 +13,7 @@ import CreateScreen from './Screens/create_screen';
 import ProfileScreen from './Screens/profile_screen';
 import CopyProfileScreen from './Screens/copycreate_screen';
 import CommentScreen from './Screens/comment_screen';
+import Maps from './Screens/maps';
 
 
 const Tab = createBottomTabNavigator();
@@ -40,6 +41,11 @@ function AppHome() {
               ? require('./static/images/profile.png')
                 : require('./static/images/profile-outline.png');
             }
+            else if(route.name === 'Maps'){
+              iconName = focused  
+              ? require('./static/images/profile.png')
+                : require('./static/images/profile-outline.png');
+            }
             return (
               <Image source={iconName} style={{ height: 20, width: 20 }}/>
             );
@@ -57,6 +63,7 @@ function AppHome() {
         <Tab.Screen name="HomeTab" component={HomeScreen} options={{tabBarLabel:'Home'}} />
         <Tab.Screen name="CreateTab" component={CreateScreen} options={{tabBarLabel:'Post'}}/>
         <Tab.Screen name="ProfileTab" component={ProfileScreen} options={{tabBarLabel:'Profile'}}/>
+        <Tab.Screen name="Maps" component={Maps}/>
       </Tab.Navigator>
     // </NavigationContainer>
   );

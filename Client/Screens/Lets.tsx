@@ -18,7 +18,7 @@ function Lets({ navigation, route }: LetsProps) {
           Help build the community you want to see
         </Text>
         <TouchableOpacity
-          onPress={() => { navigation.navigate('Login') }}
+          onPress={() => { navigation.navigate('Home') }}
           style={{
             backgroundColor: '#000000',
             padding: 12,
